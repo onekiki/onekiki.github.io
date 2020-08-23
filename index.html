@@ -1,1 +1,18 @@
-work!
+<script>
+var data = "{\"mobileAppId\":318,\"text\":\"BOT ERROR!\",\"recipients\":[{\"identifier\":\"6285755133180\"}]}";
+ 
+var xhr = new XMLHttpRequest();
+ 
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
+ 
+xhr.open("POST", "https://api.catapush.com/1/messages");
+xhr.setRequestHeader("accept", "application/json");
+xhr.setRequestHeader("content-type", "application/json");
+xhr.setRequestHeader("authorization", "Bearer f8af0152d5803848785fae17106e6c2836c35a84");
+ 
+xhr.send(data);
+</script>
